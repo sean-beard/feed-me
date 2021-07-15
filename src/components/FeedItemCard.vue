@@ -13,8 +13,8 @@
 export default {
   name: "FeedItemCard",
   props: {
-    item: Object
-  }
+    item: Object,
+  },
 };
 </script>
 

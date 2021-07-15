@@ -34,7 +34,7 @@ export default {
     return {
       subscriptions: [],
       isLoading: false,
-      error: ""
+      error: "",
     };
   },
   methods: {
@@ -70,7 +70,7 @@ export default {
           this.subscriptions = updatedSubscriptions;
         }
       });
-    }
+    },
   },
   created() {
     this.fetchSubscriptions();
@@ -78,7 +78,7 @@ export default {
   },
   beforeDestroy() {
     this.eventHub.$off("subscribe", this.fetchSubscriptions);
-  }
+  },
 };
 </script>
 

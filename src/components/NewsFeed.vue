@@ -86,10 +86,10 @@ import FeedItemCard from "./FeedItemCard";
 export default {
   name: "NewsFeed",
   components: {
-    FeedItemCard
+    FeedItemCard,
   },
   props: {
-    items: Array
+    items: Array,
   },
   data() {
     return {
@@ -97,7 +97,7 @@ export default {
       checkedItemIds: [],
       searchTerm: "",
       shouldFilterUnread: false,
-      isLoading: false
+      isLoading: false,
     };
   },
   computed: {
@@ -117,14 +117,14 @@ export default {
           item.feedName.toLowerCase().indexOf(searchTerm) > -1 ||
           (item.description || "").toLowerCase().indexOf(searchTerm) > -1
       );
-    }
+    },
   },
   methods: {
     handleMarkAll(status) {
       const newIsReadStatus = status === "read";
       const payload = this.checkedItemIds.map(id => ({
         id: id,
-        isRead: newIsReadStatus
+        isRead: newIsReadStatus,
       }));
 
       this.isLoading = true;
@@ -145,7 +145,7 @@ export default {
 
             return {
               ...item,
-              isRead: newIsReadStatus
+              isRead: newIsReadStatus,
             };
           });
 
@@ -155,15 +155,15 @@ export default {
         .finally(() => {
           this.isLoading = false;
         });
-    }
+    },
   },
   watch: {
     areAllChecked(selectEverything) {
       this.checkedItemIds = selectEverything
         ? this.renderedItems.map(item => item.id)
         : [];
-    }
-  }
+    },
+  },
 };
 </script>
 

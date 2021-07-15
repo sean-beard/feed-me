@@ -11,8 +11,8 @@ import { Skeleton } from "vue-loading-skeleton";
 export default {
   name: "FeedItemSkeleton",
   components: {
-    Skeleton
-  }
+    Skeleton,
+  },
 };
 </script>
 

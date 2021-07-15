@@ -5,9 +5,9 @@ export const get = async (path, opts = { useAuth: true }) => {
     method: "GET",
     headers: opts.useAuth
       ? {
-          Authorization: `Bearer ${store.getters.authToken}`
+          Authorization: `Bearer ${store.getters.authToken}`,
         }
-      : {}
+      : {},
   });
 
   return response.json();
@@ -28,8 +28,8 @@ const requestWithBody = async ({ method, path, body }) => {
     body: JSON.stringify(body),
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${store.getters.authToken}`
-    }
+      Authorization: `Bearer ${store.getters.authToken}`,
+    },
   });
 
   return response.status !== 200

@@ -11,13 +11,13 @@ const MOBILE_BREAKPOINT = 600;
 export default {
   data() {
     return {
-      windowWidth: window.innerWidth
+      windowWidth: window.innerWidth,
     };
   },
   methods: {
     handleWindowResize() {
       this.windowWidth = window.innerWidth;
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -43,7 +43,7 @@ export default {
       if (oldWidth < MOBILE_BREAKPOINT && newWidth > MOBILE_BREAKPOINT) {
         removeMaxWidth(this.$refs.description);
       }
-    }
-  }
+    },
+  },
 };
 </script>
