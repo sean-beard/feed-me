@@ -20,7 +20,7 @@ import authMixin from "@/mixins/authMixin";
 
 export default {
   name: "PreLoginHome",
-  mixins: [authMixin]
+  mixins: [authMixin],
 };
 </script>
 

@@ -12,11 +12,11 @@ const errorMessage =
 
 export default {
   methods: {
-    ...mapActions(["setUser"])
+    ...mapActions(["setUser"]),
   },
   data() {
     return {
-      error: ""
+      error: "",
     };
   },
   created() {
@@ -37,6 +37,6 @@ export default {
       .catch(() => {
         this.error = errorMessage;
       });
-  }
+  },
 };
 </script>

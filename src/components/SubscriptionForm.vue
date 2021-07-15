@@ -45,7 +45,7 @@ export default {
       isLoading: false,
       successMsg: "",
       error: "",
-      hasUnsupportedFormatError: false
+      hasUnsupportedFormatError: false,
     };
   },
   methods: {
@@ -85,8 +85,8 @@ export default {
         .finally(() => {
           this.isLoading = false;
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

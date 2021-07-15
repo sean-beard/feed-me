@@ -5,11 +5,11 @@ import { get } from "@/utils/api";
 export default {
   data() {
     return {
-      loginUrl: `${process.env.VUE_APP_BASE_API_URL}/auth/github`
+      loginUrl: `${process.env.VUE_APP_BASE_API_URL}/auth/github`,
     };
   },
   computed: {
-    ...mapState(["isAuthenticated"])
+    ...mapState(["isAuthenticated"]),
   },
   methods: {
     ...mapActions(["setIsAuthenticated"]),
@@ -20,7 +20,7 @@ export default {
           this.$router.push({ name: "Home" });
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>

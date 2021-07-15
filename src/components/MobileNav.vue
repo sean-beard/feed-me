@@ -59,7 +59,7 @@ export default {
     var sideNav = document.querySelector(".sidenav");
     window.M.Sidenav.init(sideNav);
   },
-  computed: { ...mapState(["user"]) }
+  computed: { ...mapState(["user"]) },
 };
 </script>
 

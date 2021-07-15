@@ -33,13 +33,13 @@ export default {
   components: {
     FeedSkeleton,
     PreLoginHome,
-    NewsFeed
+    NewsFeed,
   },
   data() {
     return {
       loading: false,
       error: "",
-      feedItems: []
+      feedItems: [],
     };
   },
   methods: {
@@ -60,16 +60,16 @@ export default {
         .finally(() => {
           this.loading = false;
         });
-    }
+    },
   },
   computed: {
-    ...mapState(["isAuthenticated"])
+    ...mapState(["isAuthenticated"]),
   },
   created() {
     if (this.isAuthenticated) {
       this.getFeeds();
     }
-  }
+  },
 };
 </script>
 

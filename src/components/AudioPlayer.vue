@@ -39,12 +39,12 @@ export default {
   props: {
     item: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      playbackRate: 1
+      playbackRate: 1,
     };
   },
   methods: {
@@ -92,7 +92,7 @@ export default {
       }
 
       audioElement.playbackRate = this.playbackRate;
-    }
+    },
   },
   beforeDestroy() {
     const audioElement = this.$refs.audioRef;
@@ -100,7 +100,7 @@ export default {
 
     audioElement.removeEventListener("canplay", this.postCurrentTime);
     audioElement.removeEventListener("pause", this.postCurrentTime);
-  }
+  },
 };
 </script>
 

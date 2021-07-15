@@ -29,7 +29,7 @@ import authMixin from "@/mixins/authMixin";
 
 export default {
   name: "DesktopNav",
-  mixins: [authMixin]
+  mixins: [authMixin],
 };
 </script>
 

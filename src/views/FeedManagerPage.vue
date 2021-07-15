@@ -17,8 +17,8 @@ export default {
   name: "FeedManagerPage",
   components: {
     SubscriptionForm,
-    Subscriptions
-  }
+    Subscriptions,
+  },
 };
 </script>
 

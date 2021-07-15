@@ -12,13 +12,13 @@ import { Skeleton } from "vue-loading-skeleton";
 export default {
   name: "FeedSkeleton",
   components: {
-    Skeleton
+    Skeleton,
   },
   data() {
     return {
-      rows: [...Array(15).keys()]
+      rows: [...Array(15).keys()],
     };
-  }
+  },
 };
 </script>
 

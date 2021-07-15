@@ -25,7 +25,7 @@ import MobileNav from "./components/MobileNav";
 
 export default {
   name: "App",
-  components: { DesktopNav, MobileNav }
+  components: { DesktopNav, MobileNav },
 };
 </script>
 
